@@ -1,0 +1,166 @@
+body{
+	margin:0;
+	padding:0;	
+	font-family:"微软雅黑";
+}
+
+div{
+	width:900px;	
+	margin:0 auto;	
+}
+
+header{
+	height:120px;
+	width:900px;	
+	background:#CCC;
+	border:1px solid #CCC;
+	color: green;
+}
+
+header p{
+	position: relative;
+	color: white;	
+	width: 200px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+header h1{
+	color: #B36621;
+	text-indent: 10px;
+	text-shadow: 3px 7px 5px #444; 
+	/*font-size: 40px;*/
+}
+aside{
+	width:200px;		
+	float:left;
+	height:400px;
+	background:-webkit-linear-gradient(top, #CCC, #00CCCC);
+	border-radius: 0px 300px 0px 3px;
+	box-shadow: 10px 3px 10px #666;
+}
+
+nav{
+	margin:0 auto;	
+	padding:0;
+	margin-top:130px;
+	border:0px solid black;
+}
+
+nav>ul{
+	list-style:none;	
+}
+
+nav ul li>a{
+	display:block;
+	margin-bottom:5px;	
+	text-decoration:none;
+	font-size: 18px;
+	color:#867810;	
+	width:75px;
+	font-family: "楷体";
+	font-size: 18px;
+	-webkit-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+}
+
+nav ul li>a:hover{
+	margin-left:5px;
+	color:#E3FF50;
+}
+
+section{
+	border-right: 1px solid #CCC;
+	width: 700px;
+	margin-left: 200px;
+	height: 400px;
+	background: #FFF;
+}
+
+.layer{
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;
+	margin-left: 50px;
+	overflow: hidden;
+	position: absolute;
+}
+
+.panel{
+	width: 600px;
+	height: 400px;
+	padding-top:10px;	
+	/*border: 2px solid red;*/
+}
+
+.panel>span{
+	line-height: 30px;
+	font-size: 18px;
+	font-family: "楷体";
+}
+
+.Image1{
+	background: url(http://pic23.nipic.com/20120919/10948189_144806148144_2.jpg);
+}
+
+.Image2{
+	background: url(http://img.pconline.com.cn/images/upload/upc/tx/itbbs/1105/31/c1/7845703_1306831727542_1024x1024it.jpg);
+}
+
+.Image3{
+	background-image: url(http://imgsrc.baidu.com/forum/pic/item/dcc451da81cb39db37a50bc9d0160924aa1830c3.jpg);
+}
+
+.Image4{
+	background: url(http://pic41.nipic.com/20140519/13085675_215955104000_2.jpg);
+}
+
+.Image5{
+	background: url(http://pic5.nipic.com/20100117/298023_130112036333_2.jpg);
+}
+
+.image{
+	width: 300px;
+	height: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+	border-radius: 50%;
+	float: right;
+}
+
+footer{
+	border:1px solid #CCC;
+	background: #CCC;
+	width: 900px;
+	height: 90px;
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+}
+
+
+footer #div1{
+	height: 30px;
+	position: relative;
+	margin-top: 5px;
+	width: 450px;
+	margin: 0 auto;
+}
+footer a{
+	float: left;
+	display: block;
+	width: 90px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;	
+	color: blue;
+}
+
+footer a span:hover{
+	color:rgba(210	,50,4,1);
+	text-decoration: underline;
+}
+
+address{font-size: 14px;}
