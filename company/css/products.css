@@ -1,0 +1,13 @@
+.banner .left-list{
+	width: 184px;
+	border:1px solid #e8e8e8;
+	height: 400px;
+	background: red;
+}
+
+.banner{
+	height: 1000px;
+	background: #ddd;
+}
+
+

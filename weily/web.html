@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>web</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/web.css">
+</head>
+<body>
+	<div class="bg">
+		<div class="nav">
+		    <a href="#" class="nav-logo" title="微力首页">Weily Lab</a>
+		    <ul>
+		        <li><a href="" title="点击进入">开发工具</a></li>
+		        <li><a href="" title="点击进入">课程中心</a></li>
+		        <li><a href="" title="点击进入">学习指南</a></li>
+		    </ul>
+		</div>	
+	</div>
+	<div class="main">
+
+	<h1>Web前端</h1>
+		<div class="topbanner">
+			<img src="picture/Webs/topbanner.jpg" width="100%">
+		</div>
+
+		<div class="briefing">
+			<h2>什么是Web前端工程师，发展前景怎么样</h2>
+			<p>Web前端开发工程师是一个很新的职业，在国内乃至国际上真正开始受到重视的时间不超过7年，具有强烈的互联网时代特征</p>
+		</div>
+
+		<div class="banner banner1">
+			<div class="content animated">
+				<h3>
+					<p>互联网的建筑设计师</p>
+					<p style="text-indent: 2em">美化浏览界面、提升用户体验</p>
+				</h3>
+				<p class="detail">
+					主要职责是利用(X)HTML/CSS/JavaScript/Flash等各种Web技术进行客户端产品的开发。完成客户端程序（也就是浏览器端）的开发，开发JavaScript以及Flash模块，同时结合后台开发技术模拟整体效果，进行丰富互联网的Web开发，致力于通过技术改善用户体验。
+				</p>
+			</div>
+		</div>
+		<div class="banner banner2">
+			<div class="content animated">
+				<h3>
+					<p style="text-indent: 2em">比美工懂技术，比技术懂交互</p>
+					<p>掌控Web前端开发全局</p>
+				</h3>
+				<p class="detail">
+					精通页面设计，也精通前端技术；懂用户UI交互，也懂网站SEO；会开发、会调试、会后台开发语音、精通开发工具。配合后台开发人员实现产品界面和功能，完成表现层及前后端交互的架构设计和开发。这就是前端工程师，为网站的产品和服务，实现一流的Web界面。
+				</p>
+			</div>
+		</div>
+		<div class="banner banner3">
+			<div class="content animated">
+				<h3>
+					<p>文，可影响网站产品运营和盈利</p>
+					<p style="text-indent: 2em">武，可深达网站产品设计和开发</p>
+				</h3>
+				<p class="detail">
+					随着互联网行业的发展，web产品交互越来越复杂，用户使用体验和网站前端性能优化，这些都需要专业的前端工程师来解决。外在项目中还要弥补设计师在交互设计上的不足，前端工程师在开发过程中起着重要的承上启下的作用。 走产品运营，可发展为产品工程师、交互设计师、产品经理、产品总监……走技术研发，可发展为Web架构师、Web高级工程师、技术总监……
+				</p>
+			</div>
+		</div>
+	<!-- <div class="footer"></div> -->
+	</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var imgH=$(".bg").height();//获取背景图初始高度
+		var mainH=$(".main").offset().top;//获取浮在上面的div距离页面顶部的初始高度
+		var windowW=$(window).width();
+		$(".footer").width(windowW).css("left",-(windowW-1100)/2+"px");
+		$(window).on("scroll",function(){//给鼠标滚动绑定事件
+			animate();//调用添加动画类名函数animate
+			var scrollTop=$(window).scrollTop();//滚动条距页面顶部滚动的高度
+			var nowH=imgH-scrollTop*(imgH-100)/(mainH-100);//给背景图定义新的高度：scrollTop*倍数
+				if (nowH>70) {
+					$(".bg").removeClass("bg-z-index").css("height",nowH+"px");//给背景图设置新的高度
+				}
+				else{
+					$(".bg").addClass("bg-z-index").css({
+						height:70+"px"
+					})
+				}
+		})
+		function animate(){
+			var scrollTop=$(window).scrollTop();//滚动条距页面顶部距离
+			var WindowH=$(window).height();//窗口高度
+			var banner1H=$(".banner1").height();//banner高度
+			var banner2H=$(".banner2").height();
+			var banner3H=$(".banner3").height();
+			var banner1Top=$(".banner1").offset().top;//banner距离页面顶部高度
+			var banner2Top=$(".banner2").offset().top;
+			var banner3Top=$(".banner3").offset().top;
+			if ((banner1Top-WindowH+150)<scrollTop) {
+				$(".banner1>.content").addClass("fadeInRight")//当banner在页面中出现时添加动画类名fadeInLeft
+			}
+			if ((banner2Top-WindowH+150)<scrollTop) {
+				$(".banner2>.content").addClass("fadeInLeft")
+			}
+			if ((banner3Top-WindowH+150)<scrollTop) {
+				$(".banner3>.content").addClass("fadeInRight")
+			}
+		}
+	})
+</script>
+</html>
