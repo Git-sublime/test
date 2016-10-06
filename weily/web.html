@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/web.css">
+	<link rel="stylesheet" type="text/css" href="css/mF_fancy.css">
 </head>
 <body>
 	<div class="bg">
@@ -22,7 +23,14 @@
 
 	<h1>Web前端</h1>
 		<div class="topbanner">
-			<img src="picture/Webs/topbanner.jpg" width="100%">
+			<div id="boxID" class="img-roll">
+				<div class="pic">
+					<ul>
+						<li><a href="#"><img src="picture/Webs/topbanner.jpg"></a></li>
+						<li><a href="#"><img src="picture/Webs/topbanner2.jpg"></a></li>
+					</ul>
+				</div>
+			</div><!-- img-roll -->
 		</div>
 
 		<div class="briefing">
@@ -71,8 +79,13 @@
 
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript" src="js/mF_fancy.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		myFocus.set({//myfocus调用
+			id:"boxID"
+		})
 		var imgH=$(".bg").height();//获取背景图初始高度
 		var mainH=$(".main").offset().top;//获取浮在上面的div距离页面顶部的初始高度
 		var windowW=$(window).width();
