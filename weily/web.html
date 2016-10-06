@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>web</title>
+	<title>微力实验室-web前端</title>
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/web.css">
@@ -10,7 +10,7 @@
 <body>
 	<div class="bg">
 		<div class="nav">
-		    <a href="#" class="nav-logo" title="微力首页">Weily Lab</a>
+		    <a href="join.html" class="nav-logo" title="微力首页">Weily Lab</a>
 		    <ul>
 		        <li><a href="" title="点击进入">开发工具</a></li>
 		        <li><a href="" title="点击进入">课程中心</a></li>
@@ -63,7 +63,10 @@
 				</p>
 			</div>
 		</div>
-	<!-- <div class="footer"></div> -->
+	</div>
+
+	<div class="footer">
+		<p>版权所有:西华大学微力实验室&emsp;<a href="join.html">www.xhu.weily.com</a></p>
 	</div>
 
 </body>
@@ -73,7 +76,7 @@
 		var imgH=$(".bg").height();//获取背景图初始高度
 		var mainH=$(".main").offset().top;//获取浮在上面的div距离页面顶部的初始高度
 		var windowW=$(window).width();
-		$(".footer").width(windowW).css("left",-(windowW-1100)/2+"px");
+		// $(".footer").width(windowW).css("left",-(windowW-1100)/2+"px");
 		$(window).on("scroll",function(){//给鼠标滚动绑定事件
 			animate();//调用添加动画类名函数animate
 			var scrollTop=$(window).scrollTop();//滚动条距页面顶部滚动的高度
@@ -96,13 +99,13 @@
 			var banner1Top=$(".banner1").offset().top;//banner距离页面顶部高度
 			var banner2Top=$(".banner2").offset().top;
 			var banner3Top=$(".banner3").offset().top;
-			if ((banner1Top-WindowH+150)<scrollTop) {
+			if ((banner1Top-WindowH+100)<scrollTop) {
 				$(".banner1>.content").addClass("fadeInRight")//当banner在页面中出现时添加动画类名fadeInLeft
 			}
-			if ((banner2Top-WindowH+150)<scrollTop) {
+			if ((banner2Top-WindowH+100)<scrollTop) {
 				$(".banner2>.content").addClass("fadeInLeft")
 			}
-			if ((banner3Top-WindowH+150)<scrollTop) {
+			if ((banner3Top-WindowH+100)<scrollTop) {
 				$(".banner3>.content").addClass("fadeInRight")
 			}
 		}
