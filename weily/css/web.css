@@ -81,15 +81,6 @@ body{
 	font-weight: normal;
 	margin-bottom: 20px;
 }
-.banner1 h3 p{
-	text-shadow: 3px -2px 2px #ccc;
-}
-.banner2 h3 p{
-	text-shadow: -3px -2px 2px #ccc;
-}
-.banner3 h3 p{
-	text-shadow: 3px -2px 2px #ccc;
-}
 .banner h3 p{
 	color: #069;
 	font-size: 20px;
