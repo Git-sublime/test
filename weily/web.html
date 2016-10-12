@@ -4,17 +4,17 @@
 	<meta charset="UTF-8">
 	<title>微力实验室-web前端</title>
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mF_fancy.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/web.css">
-	<link rel="stylesheet" type="text/css" href="css/mF_fancy.css">
 </head>
 <body>
 	<div class="bg">
 		<div class="nav">
 		    <a href="join.html" class="nav-logo" title="微力首页">Weily Lab</a>
 		    <ul>
-		        <li><a href="" title="点击进入">开发工具</a></li>
-		        <li><a href="" title="点击进入">课程中心</a></li>
+		        <li><a href="web.html" title="点击进入">开发工具</a></li>
+		        <li><a href="android.html" title="点击进入">课程中心</a></li>
 		        <li><a href="" title="点击进入">学习指南</a></li>
 		    </ul>
 		</div>	
@@ -23,11 +23,12 @@
 
 	<!-- <h1>Web前端</h1> -->
 		<div class="topbanner">
+			<!-- 焦点图轮播 -->
 			<div id="boxID" class="img-roll">
 				<div class="pic">
 					<ul>
-						<li><a href="#"><img src="picture/Webs/topbanner2.jpg"></a></li>
-						<li><a href="#"><img src="picture/Webs/topbanner.jpg"></a></li>
+						<li><a href="#"><img src="picture/web-img/topbanner2.jpg"></a></li>
+						<li><a href="#"><img src="picture/web-img/topbanner.jpg"></a></li>
 					</ul>
 				</div>
 			</div><!-- img-roll -->
@@ -71,7 +72,7 @@
 				</p>
 			</div>
 		</div>
-		<img src="picture/Webs/banner4.jpg">
+		<img src="picture/web-img/banner4.jpg">
 	</div>
 
 	<div class="footer">
@@ -113,13 +114,13 @@
 			var banner1Top=$(".banner1").offset().top;//banner距离页面顶部高度
 			var banner2Top=$(".banner2").offset().top;
 			var banner3Top=$(".banner3").offset().top;
-			if ((banner1Top-WindowH+100)<scrollTop) {
+			if ((banner1Top-WindowH+100)<scrollTop && banner1Top>(WindowH+100)) {//判断banner添加动画的条件
 				$(".banner1>.content").addClass("fadeInRight")//当banner在页面中出现时添加动画类名fadeInLeft
 			}
-			if ((banner2Top-WindowH+100)<scrollTop) {
+			if ((banner2Top-WindowH+100)<scrollTop && banner2Top>(WindowH+100)) {
 				$(".banner2>.content").addClass("fadeInLeft")
 			}
-			if ((banner3Top-WindowH+100)<scrollTop) {
+			if ((banner3Top-WindowH+100)<scrollTop && banner3Top>(WindowH+100)) {
 				$(".banner3>.content").addClass("fadeInRight")
 			}
 		}

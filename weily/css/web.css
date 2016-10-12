@@ -41,7 +41,7 @@ body{
 	overflow: hidden;
 }
 #boxID{
-	background: url(../picture/Webs/topbanner.jpg);
+	background: url(../picture/web-img/topbanner.jpg);
 	width: 100%;
 	height: 330px;
 }
@@ -63,17 +63,17 @@ body{
 .banner1{
 	padding: 80px 40px 0 480px;
 	height: 420px;
-	background: url(../picture/Webs/banner1.jpg);
+	background: url(../picture/web-img/banner1.jpg);
 }
 .banner2{
 	padding: 80px 460px 0 40px;
 	height: 360px;
-	background: url(../picture/Webs/banner2.jpg);
+	background: url(../picture/web-img/banner2.jpg);
 }
 .banner3{
 	padding: 80px 40px 0 480px;
 	height: 420px;
-	background: url(../picture/Webs/banner3.jpg);
+	background: url(../picture/web-img/banner3.jpg);
 }
 .banner h3{
 	width: 350px;
@@ -120,7 +120,7 @@ body{
 @media (max-width: 1100px) {
 	.bg{
 		height: 70px;
-		background-position: top left;
+		background-color: #718e96;
 	}
 	.main{
 		top: 70px;

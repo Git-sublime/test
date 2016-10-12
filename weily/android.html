@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微力实验室-android</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/android.css">
+</head>
+<body>
+	<div class="bg">
+		<div class="nav">
+		    <a href="join.html" class="nav-logo" title="微力首页">Weily Lab</a>
+		    <ul>
+		        <li><a href="web.html" title="点击进入">开发工具</a></li>
+		        <li><a href="android.html" title="点击进入">课程中心</a></li>
+		        <li><a href="" title="点击进入">学习指南</a></li>
+		    </ul>
+		</div>	
+	</div>
+
+	<div class="main">
+		<h1>移动Android工程师</h1>
+		<p>Android工程师是指从事Android移动应用操作系统、游戏和各种Android平台功能的应用、开发和测试的技术人员。以手机开发为主要对象，包括但不限于手机操作系统、手机游戏、手机其他多种功能的开发和优化人员。Android工程师是移动应用开发者，希望将自己的应用移植到该平台上或者在该平台上开发应用</p>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var bgH=$(".bg").height();
+		$(window).bind("scroll",function(){
+			var mainTop=$(".main").offset().top;
+			var scrollTop=$(window).scrollTop();
+			if(scrollTop<500){
+				$(".nav").removeClass("nav-bg");
+			}else{
+				$(".nav").addClass("nav-bg");
+			}
+		})
+	})
+</script>
+</html>

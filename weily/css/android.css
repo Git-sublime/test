@@ -1,0 +1,49 @@
+body{
+	background: #f2f2f2;
+}
+.bg{
+	width: 100%;
+	height: 500px;
+	background: url(../picture/android-img/bg.jpg);
+	background-position: center center;
+	background-size: cover;
+}
+.main{
+	width: 980px;
+	height: 2000px;
+	margin: 0 auto;
+	/*background: #ddd;*/
+}
+.nav{
+	position: absolute;
+	overflow: hidden;
+}
+.nav-bg{
+	position: fixed;
+	background: #718e96;
+	animation: show .2s ease;
+}
+@keyframes show {
+	0%{
+		opacity: .4;
+		height: 40px;
+	}
+	100%{
+		opacity: 1;
+		height: 70px;
+	}
+}
+.main h1{
+	text-align: center;
+	font-size: 50px;
+	color: #333;
+	padding: 70px 0 30px;
+}
+.main>p{
+	text-align: center;
+	color: #555;
+	text-indent: 2em;
+	font-size: 16px;
+	padding: 0 50px;
+	line-height: 25px;
+}
