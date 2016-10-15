@@ -4,26 +4,195 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=1024">
     <title>微力互动实验室</title>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-    body {
-        background: #f0f0f0;
-        overflow-x: hidden;
-    }
-    html {
-        overflow-x: hidden;
-    }
-    .mdl-list__item-text-body {
-        color: rgba(256, 256, 256, 0.56) !important;
-    }
-    .mdl-card__supporting-text {
-        font-size: 16px;
-    }
-    </style>
-  <link href="css/bundle.css" rel="stylesheet"></head>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
   <body>
-    <div id="react-app"></div>
-  <script type="text/javascript" src="js/bundle.js"></script></body>
+    <!-- nav头部导航 -->
+    <div class="nav">
+        <a href="#" class="nav-logo" title="微力首页">Weily Lab</a>
+        <ul>
+            <li><a href="web.html" title="点击进入" class="menu menu3">开发工具</a>
+                <div class="nav-menu nav-menu3">
+                    <a href="">荣誉</a>
+                    <a href="">户外活动</a>
+                    <a href="">参赛作品</a>
+                </div>
+            </li>
+            <li><a href="android.html" title="点击进入" class="menu menu2">课程中心</a>
+                <div class="nav-menu nav-menu2">
+                    <a href="">荣誉</a>
+                    <a href="">户外活动</a>
+                    <a href="">参赛作品</a>
+                </div>
+            </li>
+            <li><a href="" title="点击进入" class="menu menu1">学习指南</a>
+                <div class="nav-menu nav-menu1">
+                    <a href="">荣誉</a>
+                    <a href="">户外活动</a>
+                    <a href="">参赛作品</a>
+                </div>
+            </li>
+        </ul>
+    </div><!-- nav -->
+    
+    <!-- bg-banner头部背景大图 -->
+    <div class="bg-banner">
+        <div class="bg-box">
+            <div class="logo">
+               <div class="hoop1"></div>
+               <div class="hoop2"></div>
+               <div class="hoop3"></div>
+            </div>
+            <!-- 微力logo -->
+            <div class="bg-content">
+                <h1>微力科技实验室</h1>
+                <p>Web开发、Android开发、Unity3D开发、美工设计。微力发展至今，已不仅是一个实验室，更多的是一个平台，一个提供编程开发、学习交流、技术分享、组建团队、创新创业的平台</p>
+                <a href="#">了解更多</a>
+            </div>
+        </div>
+    </div><!-- bg-banner -->
+    
+    <!-- banner1四个方向 -->
+    <div class="banner1">
+        <h2>Profession Direction</h2>
+        <hr>
+        <a href="web.html">
+            <img src="picture/html5.png">
+            <p>Web开发</p>
+            <p>Web Develop</p>
+        </a>
+        <a href="web.html">
+            <img src="picture/andriod-icon.png">
+            <p>Andriod开发</p>
+            <p>Andriod Develop</p>
+        </a>
+        <a href="web.html">
+            <img src="picture/unity_03.png">
+            <p>Unity开发</p>
+            <p>Unity 3D Develop</p>
+        </a>
+        <a href="web.html">
+            <img src="picture/iconfont-photoshop.png">
+            <p>Art开发</p>
+            <p>Art Design</p>
+        </a>
+    </div><!-- banner1 -->
+    
+    <!-- banner2代码演示 -->
+    <div class="banner2" title="点击演示敲代码">
+        <pre class="intro">
+&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
+    &lt;meta name="viewport" content="width=1024"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="css/home.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        $(document).ready(function(){
+            document.write(&quot;feel the magic of the code&quot;);
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+        <div class="banner2-point">
+            <p>点击鼠标体会</p>
+            <p>敲代码的快感</p>
+        </div>
+    </div><!-- banner2 -->
+
+    <div class="banner3">
+        <h2>Technology</h2>
+       <!--  <p>使用最前沿的开发工具、学习最流行的开发技术、观看最高效的视频教程</p> -->
+        <hr color="#c00">
+
+        <div class="item">
+            <a href="http://www.sublimetext.com/" title="神级代码编辑软件SublimeText,也是HTML和散文先进的文本编辑器" target="_blank" class="sublime">神级代码编辑软件SublimeText,也是HTML和散文先进的文本编辑器</a>
+
+            <a href="http://rj.baidu.com/soft/detail/27390.html?ald" title="Android Studio 是一个Android集成开发工具" target="_blank" class="android">Android Studio 是一个Android集成开发工具</a>
+            
+            <a href="http://www.unity.com" title="三维视频游戏、建筑可视化、实时三维动画" target="_blank" class="unity">Unity3D是由Unity Technologies开发的一个让玩家轻松创建诸如三维视频游戏、建筑可视化、实时三维动画等类型互动内容的多平台的综合型游戏开发工具</a>
+        </div>
+        <div class="item">
+            <a href="http://www.imooc.com" title="慕课网(IMOOC)是国内最大的IT技能学习平台" target="_blank" class="imooc">慕课网(IMOOC)是国内最大的IT技能学习平台</a>
+            <a href="http://www.jikexueyuan.com" title="极客学院是中国android开发在线学习平台" target="_blank" class="jkxy">极客学院是中国android开发在线学习平台</a>
+            <a href="http://edu.manew.com/" title="国内最大的Unity3D专业视频学习平台" target="_blank" class="manew">国内最大的Unity3D专业视频学习平台</a>
+        </div>
+        <div class="item" style="border: none">
+            <a href="http://www.imooc.com" title="慕课网(IMOOC)是国内最大的IT技能学习平台" target="_blank" class="imooc">慕课网(IMOOC)是国内最大的IT技能学习平台</a>
+            <a href="http://www.jikexueyuan.com" title="极客学院是中国android开发在线学习平台" target="_blank" class="jkxy">极客学院是中国android开发在线学习平台</a>
+            <a href="http://edu.manew.com/" title="国内最大的Unity3D专业视频学习平台" target="_blank" class="manew">国内最大的Unity3D专业视频学习平台</a>
+        </div>
+    </div>
+
+    <div class="banner4">
+        <a href="join.html" title="点击加入微力">加入我们</a>
+        <p>使用最前沿的开发工具、学习最流行的开发技术、<br>观看最高效的视频教程</p>
+    </div>
+    
+    <div class="banner5"></div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.flipping_text.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".banner2").click(function(){  
+            $(".intro").flipping_text({
+                tickerTime: 2,
+                customRandomChar: false,
+                tickerCount: 10,
+                opacityEffect: true,
+                resetOnChange: false
+            })//flipping_text文字打印   
+        })
+        $(".intro").flipping_text({
+                tickerTime: 2,
+                customRandomChar: false,
+                tickerCount: 10,
+                opacityEffect: true,
+                resetOnChange: false
+        })//flipping_text文字打印  
+
+       
+        $(".nav-menu1").mouseover(function(){
+            $(".menu1").addClass("active")
+        }) 
+        $(".nav-menu1").mouseout(function(){
+            $(".menu1").removeClass("active")
+        }) 
+        $(".nav-menu2").mouseover(function(){
+            $(".menu2").addClass("active")
+        }) 
+        $(".nav-menu2").mouseout(function(){
+            $(".menu2").removeClass("active")
+        }) 
+        $(".nav-menu3").mouseover(function(){
+            $(".menu3").addClass("active")
+        }) 
+        $(".nav-menu3").mouseout(function(){
+            $(".menu3").removeClass("active")
+        }) 
+        
+        var windowH=$(window).height();
+        $(window).scroll(function(){
+            var scrollTop=$(window).scrollTop();
+            //变换导航栏背景
+            if (0<scrollTop<630) {
+                $(".nav").addClass("nav-hover").removeClass("nav-hover2");
+                // $(".nav-menu").css("top",55+"px")
+            }
+            if (630<scrollTop) {
+                $(".nav").removeClass("nav-hover").addClass("nav-hover2");
+            }
+            if (scrollTop==0) {
+                $(".nav").removeClass("nav-hover").removeClass("nav-hover2");
+            }
+        })
+    })
+   
+</script>
 </html>
-x

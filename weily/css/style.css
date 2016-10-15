@@ -274,7 +274,6 @@ a {
     height: 21px;
     background: url(../picture/down.png) no-repeat center center;
     background-size: cover;
-    /*border: 1px solid #fff;*/
     cursor: pointer;
     z-index: 99;
 }
