@@ -13,8 +13,8 @@ a{text-decoration:none;}
 .bg-banner{
 	width: 100%;
 	height: 700px;
+	background-image: url(../picture/demo-1-bg.jpg);
 	background-color: #0e2335;
-	background: url(../picture/demo-1-bg.jpg);
 	position: relative;
     background-size: cover;
 	background-position: center center;
