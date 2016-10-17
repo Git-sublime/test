@@ -211,6 +211,9 @@ a{text-decoration:none;}
 .nav a:hover{
 	background: rgba(0,0,0,.5);
 }
+#weily:hover{
+	background: none;
+}
 .active{
 	background: rgba(0,0,0,.5);
 }
