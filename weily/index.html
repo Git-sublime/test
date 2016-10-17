@@ -161,45 +161,51 @@
         <div class="honour-box">
             <div class="item6 honour">
                 <h3>荣誉墙</h3>
-                <a href="javascript:void(0)">2016第七届蓝桥杯一等奖</a>
-                <a href="javascript:void(0)">2016“华迪杯”全国大学生计算机设计大赛四川省级赛</a>
-                <a href="javascript:void(0)">2016“华为杯”四川省计算机作品赛</a>
-                <a href="javascript:void(0)">2016第七届蓝桥杯一等奖</a>
-                <a href="javascript:void(0)">2016“华迪杯”全国大学生计算机设计大赛四川省级赛</a>
-                <p class="more">展开更多<span>></span><p>
-            </div>
-            <div class="products">
-                <h3>&nbsp;成果展示</h3>
-                <div class="item6">
-                    <img src="picture/product.jpg">
-                    <div class="product-con">
-                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程</p>
+                <div class="hon-box">
+                    <div class="honour-wall">
+                        <a href="javascript:void(0)">2016第七届蓝桥杯一等奖</a>
+                        <a href="javascript:void(0)">2016“华迪杯”全国大学生计算机设计大赛四川省级赛</a>
+                        <a href="javascript:void(0)">2016“华为杯”四川省计算机作品赛</a>
+                        <a href="javascript:void(0)">2016第七届蓝桥杯一等奖</a>
+                        <a href="javascript:void(0)">2016“华迪杯”全国大学生计算机设计大赛四川省级赛</a>
+                        <a href="javascript:void(0)">2016“华为杯”四川省计算机作品赛</a>
                     </div>
                 </div>
-                <div class="item6">
+                <p class="more">展开更多<span>></span><p>
+            </div>
+
+            <div class="products">
+                <h3>成果展示</h3>
+                <a href="javascript:void(0)" class="item6">
+                    <img src="picture/shetuan.png">
+                    <div class="product-con">
+                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="item6">
+                    <img src="picture/eatgo.png">
+                     <div class="product-con">
+                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具，学习最流行的开发技术</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="item6">
                     <img src="picture/product.jpg">
                      <div class="product-con">
                         <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具，学习最流行的开发技术</p>
                     </div>
-                </div>
-                <div class="item6">
+                </a>
+                <a href="javascript:void(0)" class="item6">
                     <img src="picture/product.jpg">
                      <div class="product-con">
-                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程</p>
+                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程</p>
                     </div>
-                </div>
-                <div class="item6">
+                </a>
+                <a href="javascript:void(0)" class="item6">
                     <img src="picture/product.jpg">
                      <div class="product-con">
-                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程</p>
+                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程</p>
                     </div>
-                </div>
-                <div class="item6">
-                    <img src="picture/product.jpg">
-                     <div class="product-con">
-                        <p>使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程，使用最前沿的开发工具，学习最流行的开发技术，观看最高效的视频教程</p>
-                    </div>
-                </div><!-- item6 -->
+                </a><!-- item6 -->
             </div><!-- products -->
         </div>
     </div>
@@ -228,7 +234,6 @@
                 resetOnChange: false
         })//flipping_text文字打印  
 
-       
         $(".nav-menu1").mouseover(function(){
             $(".menu1").addClass("active")
         }) 
@@ -263,7 +268,27 @@
                 $(".nav").removeClass("nav-hover").removeClass("nav-hover2");
             }
         })
-    })
+
+        // 荣誉墙滚动
+        function solidTop(){
+            $(".honour-wall").animate({
+                marginTop:-30+"px"
+            },1000,function(){   
+                $(".honour-wall>a").eq(0).appendTo($(".honour-wall"));
+                $(".honour-wall").css("marginTop",0+"px");
+            });
+        }
+        var Timer=setInterval(function(){
+                solidTop();
+            },2500)
+        $(".honour-wall").hover(function(){
+            clearInterval(Timer);
+        },function(){
+            Timer=setInterval(function(){
+                solidTop();
+            },2500)
+        })
+    })//ready
    
 </script>
 </html>
