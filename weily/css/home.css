@@ -270,7 +270,8 @@ hr:hover{
 /*banner2==============代码图=======================================*/
 .banner2{
 	height: 500px;
-	background: url(../picture/banner2.jpg);
+	background-image: url(../picture/banner2.jpg);
+	background-color: #0e2335;
 	background-position: 0 -200px;
 	transition:all 2s;
 	-webkit-transition:all 2s;
@@ -306,7 +307,7 @@ hr:hover{
 	text-indent: 10px;
 }
 
-/*banner3==============================================================*/
+/*banner3======资源分享、开发工具、网站===================================*/
 .banner3{
 	padding-bottom: 50px;
 	background: #f2f2f2;
