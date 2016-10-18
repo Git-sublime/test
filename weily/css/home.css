@@ -371,6 +371,18 @@ hr:hover{
 	text-indent: 140px;
 	background: url(../picture/icon.png) no-repeat 0px -317px;	
 }
+.banner3 .item>a.github{
+	text-indent: 37px;
+	background: url(../picture/icon.png) no-repeat 0px -397px;	
+}
+.banner3 .item>a.youdao{
+	text-indent: 125px;
+	background: url(../picture/icon.png) no-repeat 0px -441px;	
+}
+.banner3 .item>a.ps{
+	text-indent: 37px;
+	background: url(../picture/icon.png) no-repeat 0px -484px;	
+}
 .banner3 .item>a:hover{
 	text-decoration: underline;
 	color: #c93949;
@@ -403,7 +415,9 @@ hr:hover{
 	-moz-transition: all .3s;
 }
 .banner4 a:hover{
-	font-size: 18px;
+	/*font-size: 18px;*/
+	transform: scale(1.1,1.1);
+	-webkit-transform:scale(1.1,1.1);
 }
 .banner4 p{
 	color: #fff;
@@ -465,6 +479,7 @@ hr:hover{
 	font-size: 14px;
 	margin-bottom: 20px;
 	text-indent: 2em;
+	line-height: 22px;
 }
 .program-btn{
 	position: absolute;
@@ -586,7 +601,57 @@ hr:hover{
 }
 
 
+.product-img{
+	overflow: hidden;
+	position: relative;
+}
+.product-img img{
+	transition: all .5s;
+}
+.product-img:hover img{
+	transform: scale(1.2,1.2);
+}
+
+.product-suggest{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	position: absolute;
+	bottom: -50px;
+	transition: all .5s;
+}
+.product-name{
+	line-height: 50px;
+	text-indent: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #444;
+}
+.products .item6:hover .product-suggest{
+	bottom: 0;
+}
+/*footer=======================================*/
 .footer{
 	height: 300px;
 	background: #0e2335;
+}
+.share{
+	text-align: center;
+	padding-top: 50px;
+}
+.share a{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	border-radius: 50%;
+}
+.share a.weixin{
+	background: url(../picture/icon.png) no-repeat 0px -527px;
+}
+.share a.weibo{
+	background: url(../picture/icon.png) no-repeat 0px -571px;
+}
+.share a.fenxiang{
+	background: url(../picture/icon.png) no-repeat 0px -615px;
 }
