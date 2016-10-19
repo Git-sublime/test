@@ -218,6 +218,9 @@ a{text-decoration:none;}
 .active{
 	background: rgba(0,0,0,.5);
 }
+.active1{
+	background: #78969e;
+}
 
 /*banner1===========板块一，各个方向================================*/
 .banner1{
@@ -608,7 +611,7 @@ hr:hover{
 .product-img img{
 	transition: all .5s;
 }
-.product-img:hover img{
+.products .item6:hover img{
 	transform: scale(1.2,1.2);
 }
 

@@ -238,6 +238,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.flipping_text.js"></script>
 <script type="text/javascript">
+    //flipping_text文字打印  
     $(document).ready(function(){
         $(".banner2").click(function(){  
             $(".intro").flipping_text({
@@ -246,7 +247,7 @@
                 tickerCount: 10,
                 opacityEffect: true,
                 resetOnChange: false
-            })//flipping_text文字打印   
+            }) 
         })
         $(".intro").flipping_text({
                 tickerTime: 2,
@@ -256,35 +257,29 @@
                 resetOnChange: false
         })//flipping_text文字打印  
 
-        $(".nav-menu1").mouseover(function(){
-            $(".menu1").addClass("active")
-        }) 
-        $(".nav-menu1").mouseout(function(){
-            $(".menu1").removeClass("active")
-        }) 
-        $(".nav-menu2").mouseover(function(){
-            $(".menu2").addClass("active")
-        }) 
-        $(".nav-menu2").mouseout(function(){
-            $(".menu2").removeClass("active")
-        }) 
-        $(".nav-menu3").mouseover(function(){
-            $(".menu3").addClass("active")
-        }) 
-        $(".nav-menu3").mouseout(function(){
-            $(".menu3").removeClass("active")
-        }) 
+        //导航选中变化
+        $(".nav-menu").each(function(i,value){
+            $(".nav-menu").eq(i).mouseover(function(){
+                $(".menu").eq(i).addClass("active")
+            }) 
+            $(".nav-menu").eq(i).mouseout(function(){
+                $(".menu").eq(i).removeClass("active")
+            }) 
+        })
         
+        //变换导航栏背景
         var windowH=$(window).height();
         $(window).scroll(function(){
             var scrollTop=$(window).scrollTop();
-            //变换导航栏背景
             if (0<scrollTop<630) {
                 $(".nav").addClass("nav-hover").removeClass("nav-hover2");
-                // $(".nav-menu").css("top",55+"px")
+                $(".nav-menu").removeClass("active1");
+                $(".menu").removeClass("active1")
             }
             if (630<scrollTop) {
                 $(".nav").removeClass("nav-hover").addClass("nav-hover2");
+                $(".nav-menu").removeClass("active").addClass("active1");
+                $(".menu").removeClass("active").addClass("active1")
             }
             if (scrollTop==0) {
                 $(".nav").removeClass("nav-hover").removeClass("nav-hover2");
@@ -310,7 +305,7 @@
                 solidTop();
             },2500)
         })
-    })//ready
+    })//document.ready
    
 </script>
 </html>
