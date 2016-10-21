@@ -3,21 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>微力实验室-web前端</title>
+    <link rel="Shortcut Icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/mF_fancy.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/web.css">
 </head>
 <body>
 	<div class="bg">
-		<div class="nav">
-		    <a href="join.html" class="nav-logo" title="微力首页">Weily Lab</a>
-		    <ul>
-		        <li><a href="web.html" title="点击进入">开发工具</a></li>
-		        <li><a href="android.html" title="点击进入">课程中心</a></li>
-		        <li><a href="" title="点击进入">学习指南</a></li>
-		    </ul>
-		</div>	
+		<!-- nav头部导航 -->
+		    <div class="nav">
+		        <a href="#" class="nav-logo" title="微力首页" id="weily">Weily Lab</a>
+		        <ul>
+		            <li><a href="javascript:void(0)" title="点击进入" class="menu menu3">开发工具</a>
+		                <div class="nav-menu nav-menu3">
+		                    <a href="web.html">荣誉</a>
+		                    <a href="android.html">户外活动</a>
+		                    <a href="">参赛作品</a>
+		                </div>
+		            </li>
+		            <li><a href="javascript:void(0)" title="点击进入" class="menu menu2">课程中心</a>
+		                <div class="nav-menu nav-menu2">
+		                    <a href="">荣誉</a>
+		                    <a href="">户外活动</a>
+		                    <a href="">参赛作品</a>
+		                </div>
+		            </li>
+		            <li><a href="javascript:void(0)" title="点击进入" class="menu menu1">学习指南</a>
+		                <div class="nav-menu nav-menu1">
+		                    <a href="web.html">荣誉</a>
+		                    <a href="android.html">户外活动</a>
+		                    <a href="">参赛作品</a>
+		                </div>
+		            </li>
+		        </ul>
+		    </div><!-- nav -->
 	</div>
 	<div class="main">
 
@@ -76,8 +96,25 @@
 	</div>
 
 	<div class="footer">
-		<p>版权所有:西华大学微力实验室&emsp;<a href="join.html">www.xhu.weily.com</a></p>
-	</div>
+	      <div class="share">
+	          <a href="javascript:void(0)" class="weixin"></a>
+	          <a href="javascript:void(0)" class="weibo"></a>
+	          <a href="jhttp://service.weibo.com/share/share.php" class="fenxiang"></a>
+	      </div>
+
+	      <ul class="clearfix about-us">
+	          <li><a href="javascript:void(0)">版权所有<span>|</span></a></li>
+	          <li><a href="javascript:void(0)">关于我们<span>|</span></a></li>
+	          <li><a href="javascript:void(0)">网站导航<span>|</span></a></li>
+	          <li><a href="javascript:void(0)">联系电话&nbsp;18228075165<span>|</span></a></li>
+	          <li><a href="javascript:void(0)">邮箱&nbsp;249262363@qq.com</a></li>
+	      </ul>
+
+	      <ul class="clearfix address">
+	          <li><a href="index.html" style="margin-right: 20px">&copy;微力科技实验室<span>www.weily.com</span></a></li>
+	          <li><a href="javascript:void(0)">地址<span>成都市西华大学第六教学楼421</span></a></li>
+	      </ul>
+	  </div>
 
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -124,6 +161,35 @@
 				$(".banner3>.content").addClass("fadeInRight")
 			}
 		}
+
+		//导航选中变化
+        $(".nav-menu").each(function(i,value){
+            $(".nav-menu").eq(i).mouseover(function(){
+                $(".menu").eq(i).addClass("active")
+            }) 
+            $(".nav-menu").eq(i).mouseout(function(){
+                $(".menu").eq(i).removeClass("active")
+            }) 
+        })
+        
+		//变换导航栏背景
+		var windowH=$(window).height();
+		$(window).scroll(function(){
+		    var scrollTop=$(window).scrollTop();
+		    if (0<scrollTop<210) {
+		        $(".nav").addClass("nav-hover").removeClass("nav-hover2");
+		        $(".nav-menu").removeClass("active1");
+		        $(".menu").removeClass("active1")
+		    }
+		    if (210<scrollTop) {
+		        $(".nav").removeClass("nav-hover").addClass("nav-hover2");
+		        $(".nav-menu").removeClass("active").addClass("active1");
+		        $(".menu").removeClass("active").addClass("active1")
+		    }
+		    if (scrollTop==0) {
+		        $(".nav").removeClass("nav-hover").removeClass("nav-hover2");
+		    }
+		})
 	})
 </script>
 </html>
