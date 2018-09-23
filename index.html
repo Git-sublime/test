@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="./public/css/bootstrap.min.css">
 <style>
 	#app{width: 100%;min-height: 100vh;position: relative;overflow: hidden;}
-	.bgimg{position: absolute;top: 0;left: 0;z-index: -1;height: 100vh;filter: contrast(120%) grayscale(100%);opacity: .2}
+	.bgimg{position: absolute;top: 0;left: 0;z-index: -1;filter: contrast(120%) grayscale(100%);opacity: .2}
 	@media screen and (min-width: 540px){.bgimg{width: 100%} } 
 	.container{max-width: 800px;}
 	.main{padding-bottom: 50px;}
@@ -29,7 +29,8 @@
 	.calc-detail{position: relative;}
 	.tips{line-height: 22px;text-indent: 2px;font-size: 12px;margin-bottom: 0;}
 	.tips>span{color: #fba31a;}
-	.calc-display{position: absolute;left: 0;bottom: -36px;line-height: 20px;text-align: center;width: 100%;font-size: 12px;color: #337ab7;}
+	.calc-display{position: absolute;left: 0;bottom: -36px;line-height: 20px;text-align: center;width: 100%;font-size: 12px;color: #777;}
+	.calc-display-light{color: #337ab7;}
 	.calc-display>span{cursor: pointer;display: inline-block;margin: 0 auto;padding: 0 20px;}
 	.table{margin: 10px 0;}
 	.table>tbody>tr>td{text-align: center;}
@@ -41,7 +42,7 @@
 <body>
 	<div id="app">
 		<!-- 背景图 -->
-		<img class="bgimg" src="public/img/taxBg.jpg" alt="">
+		<img class="bgimg" src="public/img/taxBg.jpg" alt="" id="bgimg">
 		<!-- 导航栏 -->
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid container nav-wrapper">
@@ -125,13 +126,13 @@
 						</p>
 						<p class="tips"><span>实发工资</span> = 税前工资 - 五险一金 - 应纳税额</p>
 						<p class="tap-calc" v-show="FuckMoney > 0">
-							{{TaxBefore}}&nbsp;-&nbsp;{{Fraog}}&nbsp;-&nbsp;{{NotMoney}}&nbsp;=&nbsp;
+							{{TaxBefore}}<span v-show="Fraog > 0">&nbsp;-&nbsp;{{Fraog}}</span>&nbsp;-&nbsp;{{NotMoney}}&nbsp;=&nbsp;
 							<span class="high-light">{{TaxAfter}} 元</span>
 						</p>
 					</div>
 				</div>
 				<!-- 展开详细计算过程 -->
-				<p class="calc-display" v-show="!IsShowDetail" @click="IsShowDetail = true"><span>详细信息 <span class="glyphicon glyphicon-menu-down"></span></span></p>
+				<p class="calc-display" :class="{'calc-display-light': FuckMoney > 0}" v-show="!IsShowDetail" @click="IsShowDetail = true"><span>详细信息 <span class="glyphicon glyphicon-menu-down"></span></span></p>
 			</div>
 		</div>
 		<!-- 
@@ -167,6 +168,9 @@
 					// 置空税前工资和五险一金
 					this.TaxBefore = '';
 					this.Fraog = '';
+					// 设置背景图高度
+					var winH = document.documentElement.clientHeight;
+					document.getElementById("bgimg").style.height = winH + "px";
 				}
 			},
 			computed: {
